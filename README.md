@@ -64,13 +64,13 @@ Recipace-AI addresses the creative overhead for food content creators by auto-dr
 <summary>:film_strip: Click to expand screenshots</summary>
 
 1. **Header & Logo**  
-   ![Header](docs/screenshots/header.png)  
+   ![Header](img/header.png)  
 2. **Parameter Accordion**  
-   ![Parameters](docs/screenshots/parameters.png)  
+   ![Parameters](img/parameters.png)  
 3. **Generated Recipe & Extras**  
-   ![Recipe](docs/screenshots/recipe.png)  
+   ![Recipe](img/recipe.png)  
 4. **DOCX Export Preview**  
-   ![DOCX](docs/screenshots/docx_preview.png)  
+   ![DOCX](img/docx_preview.png)  
 </details>
 
 ---
