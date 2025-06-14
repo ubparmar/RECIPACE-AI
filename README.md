@@ -44,7 +44,7 @@
 ## 🧐 Project Overview
 
 Recipace-AI addresses the creative overhead for food content creators by auto-drafting broadcast-ready recipes **and** all accompanying materials in seconds. Spend less time planning and more time cooking (and filming)!
-
+Try it Out:[https://recipace-ai.streamlit.app/]
 ---
 
 ## 🛠 Tech Stack
