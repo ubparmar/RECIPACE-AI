@@ -5,13 +5,13 @@
 **Recipace-AI** is a Streamlit-powered web app that leverages Google’s Gemma 3-27B model to auto-generate richly detailed, one-of-a-kind recipes for YouTube food creators. In one click you’ll get:
 
 - **Full Recipe**: Title, ingredients, cooking method, step-by-step guide  
-- **Chef’s Insights**: Pro tips, plating suggestions, common pitfalls to avoid  
+- **Chef’s Insights**: Pro tips, plating suggestions, common pitfalls  
 - **YouTube Script**: Ready-to-use intro, narration, and outro  
-- **Grocery List**: Shopping list organized by category  
+- **Grocery List**: Shopping list grouped by category  
 - **Timers**: Prep & cook step estimates  
 - **Nutrition Facts**: Macro & micro breakdown  
 - **Substitutions**: Flexible ingredient swaps  
-- **Scaling & Conversion**: Adjust servings; switch between Imperial/Metric  
+- **Scaling & Conversion**: Adjust servings; switch Imperial/Metric  
 - **Save & Download**: Export as `.txt` or richly formatted `.docx`  
 - **Session Library**: Save favorites for later  
 - **One-click Tweet**: Share a snippet on Twitter  
@@ -23,19 +23,16 @@
 1. [Project Overview](#project-overview)  
 2. [Tech Stack](#tech-stack)  
 3. [Screenshots](#screenshots)  
-4. [Installation & Setup](#installation--setup)  
+4. [Installation & Local Setup](#installation--local-setup)  
    - [Prerequisites](#prerequisites)  
    - [Clone & Virtual Environment](#clone--virtual-environment)  
-   - [Dependencies](#dependencies)  
-   - [Environment Variables](#environment-variables)  
+   - [Install Dependencies](#install-dependencies)  
+   - [Configure Environment Variables](#configure-environment-variables)  
+   - [(Optional) Seed or Update `recipace.json`](#optional-seed-or-update-recipacejson)  
+   - [Run the App Locally](#run-the-app-locally)  
 5. [Usage Guide](#usage-guide)  
-   - [Generate Tab](#generate-tab)  
-   - [Saved Recipes Tab](#saved-recipes-tab)  
-   - [About Tab](#about-tab)  
 6. [Parameter Configuration](#parameter-configuration)  
 7. [Advanced Features & Workflow](#advanced-features--workflow)  
-   - [Prompt Engineering](#prompt-engineering)  
-   - [DOCX Export Format](#docx-export-format)  
 8. [Project Structure](#project-structure)  
 9. [Troubleshooting](#troubleshooting)  
 10. [Contributing](#contributing)  
@@ -46,22 +43,25 @@
 
 ## 🧐 Project Overview
 
-Recipace-AI addresses the creative overhead for food content creators by auto-drafting complete, broadcast-ready recipes **and** accompanying materials in seconds. No more hours spent writing ingredient lists, calculating timers, or scripting your on-camera dialogue—focus on cooking (and filming) instead.
+Recipace-AI addresses the creative overhead for food content creators by auto-drafting broadcast-ready recipes **and** all accompanying materials in seconds. Spend less time planning and more time cooking (and filming)!
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend/UI**: Streamlit  
-- **LLM Backend**: Google Generative AI (Gemma 3-27B) via `google-generativeai` client  
-- **Environment**: Python 3.8+ (venv)  
+- **UI**: Streamlit  
+- **LLM Backend**: Google Generative AI (Gemma 3-27B) via `google-generativeai`  
+- **Language**: Python 3.8+  
 - **Data**: `recipace.json` for parameter definitions  
-- **Document Export**: `python-docx` for Word (.docx) output  
+- **Doc Export**: `python-docx` for Word (.docx) output  
 - **Config**: `python-dotenv` for secret management  
 
 ---
 
 ## 📸 Screenshots
+
+<details>
+<summary>:film_strip: Click to expand screenshots</summary>
 
 1. **Header & Logo**  
    ![Header](docs/screenshots/header.png)  
@@ -71,23 +71,30 @@ Recipace-AI addresses the creative overhead for food content creators by auto-dr
    ![Recipe](docs/screenshots/recipe.png)  
 4. **DOCX Export Preview**  
    ![DOCX](docs/screenshots/docx_preview.png)  
+</details>
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙️ Installation & Local Setup
 
 ### Prerequisites
 
-- Python 3.8 or higher  
-- `git`, `pip`  
+- **Python 3.8+** installed (`python --version`)  
+- **pip** (package installer) (`pip --version`)  
+- **Git** (`git --version`)  
 
 ### Clone & Virtual Environment
 
 ```bash
+# 1. Clone this repo
 git clone https://github.com/your-username/recipace-ai.git
 cd recipace-ai
+
+# 2. Create a virtual environment
 python3 -m venv venv
-# macOS/Linux:
+
+# 3. Activate the venv
+# macOS / Linux
 source venv/bin/activate
-# Windows (PowerShell):
+# Windows (PowerShell)
 .\venv\Scripts\Activate.ps1
